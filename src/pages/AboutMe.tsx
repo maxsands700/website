@@ -37,9 +37,9 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <div className="relative flex-1 flex flex-col items-center px-8 pt-6 pb-16">
+    <div className="relative flex-1 flex flex-col items-center px-4 md:px-8 pt-6 pb-16">
       <h1
-        className={`text-6xl font-bold text-center text-white transition-[opacity,filter,transform] duration-1000 ease-out ${
+        className={`text-4xl md:text-6xl font-bold text-center text-white transition-[opacity,filter,transform] duration-1000 ease-out ${
           loaded
             ? "opacity-100 blur-0 translate-y-0"
             : "opacity-0 blur-md -translate-y-6"

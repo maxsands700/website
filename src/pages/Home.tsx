@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative flex-1 grid grid-cols-3 items-center">
+      <div className="relative flex-1 grid grid-cols-1 md:grid-cols-3 items-center px-4 md:px-0">
         <div className="col-span-1 flex justify-center items-center">
           <Tooltip>
             <TooltipTrigger asChild>
@@ -22,7 +22,7 @@ export default function Home() {
                 <img
                   src="/profile-photo-transparent.png"
                   alt="Profile photo"
-                  className={`h-[90vh] w-auto max-w-none object-contain transition-all duration-3000 cursor-pointer hover:duration-100 hover:scale-102 hover:grayscale ${loaded ? "grayscale-0" : "grayscale"}`}
+                  className={`h-[50vh] md:h-[90vh] w-auto max-w-none object-contain transition-all duration-3000 cursor-pointer hover:duration-100 hover:scale-102 hover:grayscale ${loaded ? "grayscale-0" : "grayscale"}`}
                 />
               </a>
             </TooltipTrigger>
@@ -31,9 +31,9 @@ export default function Home() {
             </TooltipContent>
           </Tooltip>
         </div>
-        <div className="col-span-2 flex flex-col justify-center items-center gap-4">
+        <div className="col-span-1 md:col-span-2 flex flex-col justify-center items-center gap-4">
           <p
-            className={`text-2xl tracking-widest uppercase text-white/70 font-light
+            className={`text-lg md:text-2xl tracking-widest uppercase text-white/70 font-light
               transition-all duration-2000 delay-500
               ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           >
@@ -41,7 +41,7 @@ export default function Home() {
           </p>
 
           <h1
-            className={`text-9xl font-extralight tracking-tight text-white
+            className={`text-5xl md:text-9xl font-extralight tracking-tight text-white
               transition-all duration-2000 delay-700
               ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           >
@@ -49,7 +49,7 @@ export default function Home() {
           </h1>
 
           <p
-            className={`text-3xl font-extralight text-white/80 leading-relaxed
+            className={`text-xl md:text-3xl font-extralight text-white/80 leading-relaxed
               transition-all duration-2000 delay-1000
               ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           >
