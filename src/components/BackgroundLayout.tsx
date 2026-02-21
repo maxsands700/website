@@ -18,6 +18,8 @@ export function BackgroundLayout() {
           transition: "filter 7s ease",
         }}
       />
+      {/* Dark gradient scrim for text readability at top */}
+      <div className="absolute inset-x-0 top-0 h-80 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
       <Outlet />
     </>
   );

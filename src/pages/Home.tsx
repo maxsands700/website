@@ -9,7 +9,7 @@ export default function Home() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    setLoaded(true);
+    requestAnimationFrame(() => setLoaded(true));
   }, []);
 
   return (
