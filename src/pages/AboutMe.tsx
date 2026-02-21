@@ -71,13 +71,10 @@ export default function AboutMe() {
           }`}
         >
           <div className="md:col-span-2 rounded-lg border border-white/10 bg-background/30 backdrop-blur-sm p-6 space-y-3">
-            <h2
-              className="text-2xl font-light text-white"
-              style={{ color: "oklch(0.4009 0.091 266.48)" }}
-            >
+            <h2 className="text-2xl font-light text-[oklch(0.4009_0.091_266.48)]">
               Background
             </h2>
-            <p className="text-white/70 font-light leading-relaxed">
+            <p className="text-grey-500 md:text-white/70 font-light leading-relaxed">
               I originally studied Finance for 3 years at McGill University in
               Montreal, Canada. After graduating, I dabbled in coding during my
               spare time and realized that software engineering was my true

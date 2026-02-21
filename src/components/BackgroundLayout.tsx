@@ -1,12 +1,20 @@
 import { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 export function BackgroundLayout() {
   const [loaded, setLoaded] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    requestAnimationFrame(() => setLoaded(true));
-  }, []);
+    if (location.pathname === "/") {
+      setLoaded(false);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => setLoaded(true));
+      });
+    } else {
+      setLoaded(true);
+    }
+  }, [location.pathname]);
 
   return (
     <>
