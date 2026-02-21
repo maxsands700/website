@@ -135,16 +135,12 @@ export function NavBar() {
       {/* Mobile nav */}
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button
-            variant="outline"
-            size="icon"
-            className="flex md:hidden"
-          >
+          <Button variant="outline" size="icon" className="flex md:hidden">
             <Menu className="size-5" />
             <span className="sr-only">Open menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="left" className="w-64">
+        <SheetContent side="left" className="max-w-72">
           <SheetHeader>
             <SheetTitle>Navigation</SheetTitle>
           </SheetHeader>
@@ -167,8 +163,8 @@ export function NavBar() {
               );
             })}
           </nav>
-          <Separator className="mx-4" />
-          <div className="flex gap-2 px-4">
+          <Separator className="mx-4 !w-auto" />
+          <div className="flex justify-around px-4">
             {socialLinks.map(({ href, label, icon }) => (
               <a
                 key={href}
@@ -182,7 +178,7 @@ export function NavBar() {
               </a>
             ))}
           </div>
-          <Separator className="mx-4" />
+          <Separator className="mx-4 !w-auto" />
           <div className="relative overflow-hidden rounded-md mx-4">
             <a
               href="/Max_Sands_Resume.pdf"
