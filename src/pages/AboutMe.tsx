@@ -57,20 +57,24 @@ export default function AboutMe() {
 
       <div className="mt-6 max-w-5xl w-full space-y-6">
         <p
-          className={`text-xl font-light leading-relaxed text-white/90 text-center transition-[opacity,transform] duration-2000 delay-500 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          className={`text-xl font-light leading-relaxed text-white/90 text-center transition-[opacity,filter,transform] duration-2000 delay-500 ${
+            loaded
+              ? "opacity-100 blur-0 translate-y-0"
+              : "opacity-0 blur-md translate-y-4"
           }`}
         >
-          I'm an unofficial Software Engineer with a passion for building web
+          I'm an independent Software Engineer with a passion for building web
           applications and learning new things.
         </p>
 
-        <div
-          className={`grid grid-cols-1 md:grid-cols-4 gap-8 transition-[opacity,transform] duration-2000 delay-700 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
-        >
-          <div className="md:col-span-2 rounded-lg border border-white/10 bg-background/30 backdrop-blur-sm p-6 space-y-3">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div
+            className={`md:col-span-2 rounded-lg border border-white/10 bg-background/30 backdrop-blur-sm p-6 space-y-3 transition-[opacity,filter,transform] duration-2000 delay-700 ${
+              loaded
+                ? "opacity-100 blur-0 translate-x-0"
+                : "opacity-0 blur-md -translate-x-12"
+            }`}
+          >
             <h2 className="text-2xl font-light text-[oklch(0.4009_0.091_266.48)]">
               Background
             </h2>
@@ -83,7 +87,13 @@ export default function AboutMe() {
             </p>
           </div>
 
-          <div className="rounded-lg border border-white/10 bg-background/30 backdrop-blur-sm p-6 space-y-3">
+          <div
+            className={`rounded-lg border border-white/10 bg-background/30 backdrop-blur-sm p-6 space-y-3 transition-[opacity,filter,transform] duration-2000 delay-900 ${
+              loaded
+                ? "opacity-100 blur-0 translate-y-0"
+                : "opacity-0 blur-md translate-y-12"
+            }`}
+          >
             <h2
               className="text-2xl font-light text-white"
               style={{ color: "oklch(0.4009 0.091 266.48)" }}
@@ -97,7 +107,13 @@ export default function AboutMe() {
             </p>
           </div>
 
-          <div className="rounded-lg border border-white/10 bg-background/30 backdrop-blur-sm p-6 space-y-3">
+          <div
+            className={`rounded-lg border border-white/10 bg-background/30 backdrop-blur-sm p-6 space-y-3 transition-[opacity,filter,transform] duration-2000 delay-1100 ${
+              loaded
+                ? "opacity-100 blur-0 translate-x-0"
+                : "opacity-0 blur-md translate-x-12"
+            }`}
+          >
             <h2
               className="text-2xl font-light text-white"
               style={{ color: "oklch(0.4009 0.091 266.48)" }}
@@ -114,8 +130,10 @@ export default function AboutMe() {
 
         <Carousel
           opts={{ loop: true }}
-          className={`transition-[opacity,transform] duration-2000 delay-900 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          className={`transition-[opacity,filter,transform] duration-2000 delay-1300 ${
+            loaded
+              ? "opacity-100 blur-0 translate-x-0"
+              : "opacity-0 blur-md -translate-x-12"
           }`}
         >
           <div className="flex gap-4 items-stretch">
@@ -191,8 +209,10 @@ export default function AboutMe() {
 
         <Carousel
           opts={{ loop: true }}
-          className={`transition-[opacity,transform] duration-2000 delay-1000 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          className={`transition-[opacity,filter,transform] duration-2000 delay-1500 ${
+            loaded
+              ? "opacity-100 blur-0 translate-x-0"
+              : "opacity-0 blur-md translate-x-12"
           }`}
         >
           <div className="flex gap-4 items-stretch">
