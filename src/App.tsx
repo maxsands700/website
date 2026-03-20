@@ -6,6 +6,7 @@ import { BackgroundLayout } from "@/components/BackgroundLayout";
 import Home from "@/pages/Home";
 import AboutMe from "@/pages/AboutMe";
 import Articles from "@/pages/Articles";
+import Notes from "@/pages/Notes";
 
 const ImmigrationArticle = lazy(
   () => import("@/features/thinkpad_articles/ImmigrationArticle"),
@@ -41,6 +42,7 @@ export function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about-me" element={<AboutMe />} />
             <Route path="/articles" element={<Articles />} />
+            <Route path="/notes" element={<Notes />} />
             <Route
               path="/articles/thinkpad/immigration"
               element={

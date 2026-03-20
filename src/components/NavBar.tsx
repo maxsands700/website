@@ -37,6 +37,7 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/about-me", label: "About" },
   { to: "/articles", label: "Articles" },
+  { to: "/notes", label: "Notes" },
 ];
 
 const socialLinks = [

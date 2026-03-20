@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Github } from "lucide-react";
+import { type ReactNode, useState, useEffect } from "react";
+import { GithubIcon } from "lucide-react";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import {
   Carousel,
@@ -7,6 +7,45 @@ import {
   CarouselItem,
   useCarousel,
 } from "@/components/ui/carousel";
+
+const roleModels: { name: string; description: ReactNode }[] = [
+  {
+    name: "Eric A. Posner & E. Glen Weyl",
+    description: (
+      <>
+        Their book{" "}
+        <em>
+          Radical Markets: Uprooting Capitalism & Democracy for a Just Society
+        </em>{" "}
+        is one of the most prescient works I've read. It challenges fundamental
+        assumptions about property and democracy with concrete, actionable
+        mechanisms — like quadratic voting and common ownership self-assessed
+        tax — that could meaningfully reduce inequality and strengthen
+        collective decision-making.
+      </>
+    ),
+  },
+  {
+    name: "Ray Dalio",
+    description:
+      "Ray Dalio is more of a historian, econometrician, and data scientist than hedge fund manager. His ability to distill centuries of history into clear narratives of cause and effect is remarkable, producing deeply compelling work on debt crises and the changing world order.",
+  },
+  {
+    name: "Vitalik Buterin",
+    description:
+      "His selfless, altruistic approach to building Ethereum stands out in a space driven by profit. The technology he championed underpins concepts like quadratic voting and other mechanisms that could fundamentally strengthen democratic processes and individual liberties.",
+  },
+  {
+    name: "David Friedberg",
+    description:
+      'David Friedberg (a.k.a. "The Sultan of Science") is my favorite voice on the All-In Podcast. He has a Dalio-esque ability to deconstruct complex problems into clear, first-principles reasoning — particularly on topics like the U.S. fiscal outlook. His altruism and intellectual honesty make him stand out.',
+  },
+  {
+    name: "3Blue1Brown",
+    description:
+      "Grant Sanderson proves that deep understanding and clear communication can make even the most abstract math feel intuitive and beautiful.",
+  },
+];
 
 function CarouselArrow({ direction }: { direction: "prev" | "next" }) {
   const { scrollPrev, scrollNext, canScrollPrev, canScrollNext } =
@@ -146,61 +185,18 @@ export default function AboutMe() {
                 Influential Role Models
               </h2>
               <CarouselContent>
-                <CarouselItem>
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-medium text-white">
-                      Ray Dalio
-                    </h3>
-                    <p className="text-white/70 font-light leading-relaxed">
-                      Ray Dalio is more of a historian, econometrician, and data
-                      scientist than hedge fund manager. His ability to distill
-                      centuries of history into clear narratives of cause and
-                      effect is remarkable, producing deeply compelling work on
-                      debt crises and the changing world order.
-                    </p>
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-medium text-white">
-                      Vitalik Buterin
-                    </h3>
-                    <p className="text-white/70 font-light leading-relaxed">
-                      His selfless, altruistic approach to building Ethereum
-                      stands out in a space driven by profit. The technology he
-                      championed underpins concepts like quadratic voting and
-                      other mechanisms that could fundamentally strengthen
-                      democratic processes and individual liberties.
-                    </p>
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-medium text-white">
-                      David Friedberg
-                    </h3>
-                    <p className="text-white/70 font-light leading-relaxed">
-                      David Friedberg (a.k.a. "The Sultan of Science") is my
-                      favorite voice on the All-In Podcast. He has a Dalio-esque
-                      ability to deconstruct complex problems into clear,
-                      first-principles reasoning — particularly on topics like
-                      the U.S. fiscal outlook. His altruism and intellectual
-                      honesty make him stand out.
-                    </p>
-                  </div>
-                </CarouselItem>
-                <CarouselItem>
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-medium text-white">
-                      3Blue1Brown
-                    </h3>
-                    <p className="text-white/70 font-light leading-relaxed">
-                      Grant Sanderson proves that deep understanding and clear
-                      communication can make even the most abstract math feel
-                      intuitive and beautiful.
-                    </p>
-                  </div>
-                </CarouselItem>
+                {roleModels.map((model) => (
+                  <CarouselItem key={model.name}>
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-medium text-white">
+                        {model.name}
+                      </h3>
+                      <p className="text-white/70 font-light leading-relaxed">
+                        {model.description}
+                      </p>
+                    </div>
+                  </CarouselItem>
+                ))}
               </CarouselContent>
             </div>
             <CarouselArrow direction="next" />
@@ -247,7 +243,7 @@ export default function AboutMe() {
                       rel="noopener noreferrer"
                       className="shrink-0 rounded-md border border-white/10 bg-white/5 p-2 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
                     >
-                      <Github className="size-5" />
+                      <GithubIcon className="size-5" />
                     </a>
                   </div>
                 </CarouselItem>
@@ -272,7 +268,7 @@ export default function AboutMe() {
                       rel="noopener noreferrer"
                       className="shrink-0 rounded-md border border-white/10 bg-white/5 p-2 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
                     >
-                      <Github className="size-5" />
+                      <GithubIcon className="size-5" />
                     </a>
                   </div>
                 </CarouselItem>
@@ -295,7 +291,7 @@ export default function AboutMe() {
                       rel="noopener noreferrer"
                       className="shrink-0 rounded-md border border-white/10 bg-white/5 p-2 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
                     >
-                      <Github className="size-5" />
+                      <GithubIcon className="size-5" />
                     </a>
                   </div>
                 </CarouselItem>
