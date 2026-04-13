@@ -9,6 +9,11 @@ interface NoteLink {
 
 const noteLinks: NoteLink[] = [
   {
+    title: "The Network State: How To Start a New Country",
+    description: "By Balaji Srinivasan",
+    url: "https://puffy-bunny-845.notion.site/The-Network-State-341d50e5bd3a80a388f7ead090e343b4?source=copy_link",
+  },
+  {
     title:
       "Radical Markets: Uprooting Capitalism & Democracy for a Just Society",
     description: "By Eric Posner and E. Glen Weyl",

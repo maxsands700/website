@@ -31,6 +31,19 @@ const roleModels: { name: string; description: ReactNode }[] = [
       "Ray Dalio is more of a historian, econometrician, and data scientist than hedge fund manager. His ability to distill centuries of history into clear narratives of cause and effect is remarkable, producing deeply compelling work on debt crises and the changing world order.",
   },
   {
+    name: "Balaji Srinivasan",
+    description: (
+      <>
+        His book <em>The Network State</em> offers a bold, actionable framework
+        for how technology and collective coordination can build new societies
+        from scratch. Balaji, similar to many of these other role models, has
+        the ability to synthesize history, technology, and political theory into
+        a coherent vision for the future. In his case, his vision is a roadmap
+        for turning online communities into sovereign realities.
+      </>
+    ),
+  },
+  {
     name: "Vitalik Buterin",
     description:
       "His selfless, altruistic approach to building Ethereum stands out in a space driven by profit. The technology he championed underpins concepts like quadratic voting and other mechanisms that could fundamentally strengthen democratic processes and individual liberties.",
@@ -102,8 +115,8 @@ export default function AboutMe() {
               : "opacity-0 blur-md translate-y-4"
           }`}
         >
-          I'm an independent Software Engineer with a passion for building web
-          applications and learning new things.
+          I'm a Software Engineer with a passion for building web applications
+          and learning new things.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -160,8 +173,8 @@ export default function AboutMe() {
               Technical Skills
             </h2>
             <p className="text-white/70 font-light leading-relaxed">
-              Python, R, JavaScript, TypeScript, HTML, CSS, SQL, React.js,
-              Django, FastAPI, Tailwind CSS, PostgreSQL, Git, Web Scraping, Data
+              Python, R, JavaScript/TypeScript, HTML, Tailwind CSS, SQL,
+              React.js, Django, FastAPI, PostgreSQL, Git, Web Scraping, Data
               Visualization, Machine Learning
             </p>
           </div>
