@@ -1,5 +1,5 @@
 import { type ReactNode, useState, useEffect } from "react";
-import { GithubIcon } from "lucide-react";
+import { GithubIcon, Globe } from "lucide-react";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import {
   Carousel,
@@ -234,6 +234,30 @@ export default function AboutMe() {
                 What I'm Working On
               </h2>
               <CarouselContent>
+                <CarouselItem>
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="space-y-1">
+                      <h3 className="text-lg font-medium text-white">Vental</h3>
+                      <p className="text-white/70 font-light leading-relaxed">
+                        A B2B SaaS application that aids Commercial Real Estate
+                        professionals in estimating property taxes after a
+                        sale/acquisition.
+                      </p>
+                      <p className="text-white/40 text-sm font-light">
+                        React, TypeScript, Tailwind CSS, Python, Django,
+                        PostgreSQL
+                      </p>
+                    </div>
+                    <a
+                      href="https://vental.ai"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="shrink-0 rounded-md border border-white/10 bg-white/5 p-2 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+                    >
+                      <Globe className="size-5" />
+                    </a>
+                  </div>
+                </CarouselItem>
                 <CarouselItem>
                   <div className="flex items-start justify-between gap-4">
                     <div className="space-y-1">
